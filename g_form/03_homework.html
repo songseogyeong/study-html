@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://nid.naver.com/favicon.ico" type="image/x-icon">
+    <title>네이버 : 회원가입</title>
+</head>
+<body>
+    <div>
+        <a href=""><img width="94px" height="18px" src=".\icon\naver_logo.png" alt="이미지 오류"></a>
+    </div>
+    <div class="join_toggle">
+        실명 인증된 아이디로 가입<input type="checkbox" name="join_toggle">
+    </div>
+    <p>
+        <div class="id">
+            <fieldset>
+                <img width="30px" height="30px" src=".\icon\person.png" alt="">
+                <input type="text" placeholder="아이디" required>
+                <input type="text" value="@naver.com" readonly>
+            </fieldset>
+
+        </div>
+        <div class="password">
+            <fieldset>
+                <img width="30px" height="30px" src=".\icon\lock.png" alt="">
+                <input type="password" placeholder="비밀번호" required>
+                <img width="30px" height="30px" src=".\icon\eye.png" alt="">
+            </fieldset>
+        </div>
+        <div class="other-email">
+            <fieldset>
+                <img width="30px" height="30px" src=".\icon\mail.png" alt="">
+                <input type="email" placeholder="[선택] 이메일주소 (비밀번호 찾기 등 본인 확인용)">
+            </fieldset>
+        </div>
+    </p>
+    <p>
+        <div class="name">
+            <fieldset>
+                <img width="30px" height="30px" src=".\icon\person.png" alt="">
+                <input type="text" placeholder="이름" required>
+            </fieldset>
+        </div>
+        <div class="birth">
+            <fieldset>
+                <img width="30px" height="30px" src=".\icon\calendar.png" alt="">
+                <input type="text" placeholder="생년월일 8자리" required>
+            </fieldset>
+        </div>
+        <div name="p-com">
+            <fieldset>
+                <select name="p-com" id="" required>
+                    <option value="" selected>통신사</option>
+                    <option value="SKT">SKT</option>
+                    <option value="KT">KT</option>
+                    <option value="LG-U">LG U+</option>
+                    <option value="SKTS">SKT 알뜰폰</option>
+                    <option value="KTS">KT 알뜰폰</option>
+                    <option value="LG-US">LG U+ 알뜰폰</option>
+                </select>
+            </fieldset>
+        </div>
+        <div class="gender">
+            <fieldset>
+                <a required>
+                    <input type="radio" name="gender" value="남자"> 남자
+                    <input type="radio" name="gender" value="여자"> 여자
+                </a>
+                <a required>
+                    <input type="radio" name="nationality" value="내국인"> 내국인
+                    <input type="radio" name="nationality" value="외국인"> 외국인
+                </a>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <img width="30px" height="30px" src=".\icon\phone.png" alt="">
+                <input type="tel" placeholder="휴대전화번호" required>
+            </fieldset>
+        </div>
+    </p>
+    <p>
+        <input type="checkbox" required> [필수] 인증 약관 전체동의
+    </p>
+    <div>
+        <label for="submit">
+            <img src=".\icon\submit.png" alt="">
+        </label>
+        <input type="submit" id="submit" value="인증요청" style="display: none;">
+    </div>
+</body>
+</html>

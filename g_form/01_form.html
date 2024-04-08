@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 태그와 input 태그</title>
+</head>
+<body>
+    <form>
+        <!-- input: 입력 창 -->
+        <!-- type: 입력 창의 속성 -->
+        <!-- name: 입력 받은 값의 key 값 -->
+        <!-- placeholder: 입력 받기 전 보여지는 문구(입력 시 사라진다) -->
+        <!-- required: 반드시 입력하게 한다 -->
+        <input type="text" name="user-id" placeholder="아이디" required>
+        <!-- type ="password": 입력한 데이터를 화면에 노출되지 않게 한다 -->
+        <input type="password" name="user-password" placeholder="비밀번호">
+        <!-- fieldset: 관계된 요소끼리 묶어주며, 박스가 생성된다 -->
+        <fieldset>
+            <!-- fieldset에 주제를 줄거면 legend 태그를 쓰기 (legend로 그룹의 이름을 정할 수 있음) -->
+            <legend>성별</legend>
+            <!-- radio는 단일 선택, checkbox는 다중선택 -->
+            <label>
+                <!-- value: 어떤 값인지 알려주기 -->
+                <input type="radio" name="gender" value="선택안함"> 선택 안함
+            </label>
+            <label>
+                <input type="radio" name="gender" value="여자"> 여자
+            </label>
+            <label for="gender">
+                남자
+            </label>
+            <!-- 인풋 태그가 밖에 있으면 id를 줘서 연결 시켜주기 -->
+            <input type="radio" name="gender" id="gender" value="남자"> 
+        </fieldset>
+        <fieldset>
+            <!-- checkbox는 list 형식으로 출력 -->
+            <legend>취미</legend>
+            <label><input type="checkbox" name="hobby" value="영화감상"> 영화감상</label>
+            <label><input type="checkbox" name="hobby" value="골프"> 골프</label>
+            <label><input type="checkbox" name="hobby" value="볼링"> 볼링</label>
+            <label><input type="checkbox" name="hobby" value="기타"> 기타</label>
+            <label><input type="checkbox" name="hobby" value="테니스"> 테니스</label>
+            <label><input type="checkbox" name="hobby" value="산책"> 산책</label>
+            <label><input type="checkbox" name="hobby" value="연애"> 연애</label>
+            <label><input type="checkbox" name="hobby" value="게임"> 게임</label>
+            <label><input type="checkbox" name="hobby" value="등산"> 등산</label>
+            <label><input type="checkbox" name="hobby" value="축구"> 축구</label>
+            <label><input type="checkbox" name="hobby" value="노래"> 노래</label>
+        </fieldset>
+        <div>
+            <input type="date">
+        </div>
+        <div>
+            <input type="datetime-local">
+        </div>
+
+        <div>
+            <select name="major">
+                <option value="" selected>학과 선택</option>
+                <option value="computer">컴퓨터공학과</option>
+                <option value="model">모델학과</option>
+                <option value="nurse">간호학과</option>
+                <option value="music">실용음악과</option>
+                <option value="mechanic">기계공학과</option>
+                <option value="messcom">신문방송학과</option>
+                <option value="management">경영학과</option>
+            </select>
+        </div>
+        <div>
+            <!-- texteara은 엔터가 먹히기 때문에 반드시 한줄로 작성할 것 -->
+            <textarea cols="30" rows="3">상품명:</textarea>
+        </div>
+        <!-- 이미지 파일로 대체하기 -->
+        <!-- label에 이미지 파일 넣고 해당 이미지의 기능을 file2의 기능으로 만들기 -->
+        <label for="file2">
+            <img src=".\icon\check1.png" alt="">
+        </label>
+        <!-- 파일 추가 타입의 입력 만들고 file2 라는 key로 설정-->
+        <!-- 이미지 파일로 해당 기능을 이용할 거기 때문에, 해당 부분의 파일 추가는 화면에서 안보이도록 none 설정 -->
+        <input type="file" name="" id="file2" style="display: none;">
+        <div>
+            <!-- 제출 기능 만들기 -->
+            <!-- 디폴트 값인 제출로 표기 되기 때문에 value 값을 완료로 설정 -->
+            <input type="submit" value="완료">
+    </div>
+    </form>
+</body>
+</html>
